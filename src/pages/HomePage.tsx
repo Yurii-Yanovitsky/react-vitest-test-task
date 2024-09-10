@@ -10,7 +10,12 @@ const HomePage = () => {
     return <></>;
   }
 
-  return <div>HomePage</div>;
+  return (
+    <div className="text-center">
+      <h1 className="text-4xl font-bold">Hello World</h1>
+      <p>Welcome to the home page!</p>
+    </div>
+  );
 };
 
 export default HomePage;
