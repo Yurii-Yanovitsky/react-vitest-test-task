@@ -1,5 +1,7 @@
 import { FC, FormEvent, useCallback, useState } from "react";
 import * as Form from "@radix-ui/react-form";
+import Input from "../../../shared/components/Input";
+import Button from "../../../shared/components/Button";
 
 interface LoginFormProps {
   onLogin: (username: string, password: string) => void;
@@ -27,9 +29,8 @@ const LoginForm: FC<LoginFormProps> = ({ onLogin }) => {
           Username
         </Form.Label>
         <Form.Control asChild>
-          <input
+          <Input
             type="text"
-            className="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
             placeholder="Enter your username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -41,9 +42,8 @@ const LoginForm: FC<LoginFormProps> = ({ onLogin }) => {
           Password
         </Form.Label>
         <Form.Control asChild>
-          <input
+          <Input
             type="password"
-            className="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
             placeholder="Enter your password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -51,9 +51,7 @@ const LoginForm: FC<LoginFormProps> = ({ onLogin }) => {
         </Form.Control>
       </Form.Field>
       <Form.Submit asChild>
-        <button className="w-full bg-indigo-600 text-white py-2 rounded-lg font-semibold hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 mt-2">
-          Login
-        </button>
+        <Button>Login</Button>
       </Form.Submit>
     </Form.Root>
   );
