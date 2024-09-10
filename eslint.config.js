@@ -38,10 +38,12 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
+      "react/prop-types": "off",
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true },
       ],
+      "react/display-name": "off",
       "prettier/prettier": [
         "error",
         {
@@ -49,5 +51,5 @@ export default tseslint.config(
         },
       ],
     },
-  }
+  },
 );
