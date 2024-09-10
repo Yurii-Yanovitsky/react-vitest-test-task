@@ -51,7 +51,7 @@ const LoginForm: FC<LoginFormProps> = ({ onLogin }) => {
         </Form.Control>
       </Form.Field>
       <Form.Submit asChild>
-        <Button>Login</Button>
+        <Button className="w-full">Login</Button>
       </Form.Submit>
     </Form.Root>
   );
