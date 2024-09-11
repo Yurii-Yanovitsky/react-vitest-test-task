@@ -1,24 +1,26 @@
-import { BehaviorSubject } from "rxjs";
+import { injectable } from "tsyringe";
+import { SessionService } from "./SessionService";
 
+@injectable()
 export class AuthService {
-  private sessionSubject = new BehaviorSubject<boolean>(false);
+  constructor(private sessionService: SessionService) {}
 
   get isAuthenticated() {
-    return this.sessionSubject.value;
+    return this.sessionService.isAuthenticated;
   }
 
   public login(username: string, password: string) {
     // Mock login
     if (username && password) {
-      this.sessionSubject.next(true);
+      this.sessionService.setAuthenticated(true);
     }
   }
 
   public logout() {
-    this.sessionSubject.next(false);
+    this.sessionService.setAuthenticated(false);
   }
 
   public getAuthStatus() {
-    return this.sessionSubject.asObservable();
+    return this.sessionService.sessionState$;
   }
 }
