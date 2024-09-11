@@ -21,6 +21,7 @@ const LoginForm: FC<LoginFormProps> = ({ onLogin }) => {
 
   return (
     <Form.Root
+      role="form"
       className="w-80 p-6 border border-gray-300 shadow-lg rounded-lg"
       onSubmit={handleSubmit}
     >

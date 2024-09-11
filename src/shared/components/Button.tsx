@@ -1,15 +1,14 @@
 import {
-  FC,
   ButtonHTMLAttributes,
   PropsWithChildren,
+  PropsWithRef,
   forwardRef,
-  ForwardedRef,
 } from "react";
 
 type ButtonProps = PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement>>;
 
-const Button: FC<ButtonProps> = forwardRef(
-  ({ children, className, ...props }, ref: ForwardedRef<HTMLButtonElement>) => {
+const Button = forwardRef<HTMLButtonElement, PropsWithRef<ButtonProps>>(
+  ({ children, className, ...props }, ref) => {
     return (
       <button
         ref={ref}
