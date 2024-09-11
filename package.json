@@ -1,5 +1,5 @@
 {
-  "name": "react-test-task",
+  "name": "react-vitest-test-task",
   "private": true,
   "version": "0.0.0",
   "type": "module",
