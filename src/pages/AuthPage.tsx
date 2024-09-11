@@ -1,6 +1,6 @@
 import { useCallback } from "react";
-import { useAuth } from "../features/auth/hooks/useAuth";
 import LoginForm from "../features/auth/components/LoginForm";
+import { useAuth } from "../features/auth/hooks/useAuth";
 import { useNavigate } from "@tanstack/react-router";
 
 const AuthPage = () => {

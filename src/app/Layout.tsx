@@ -1,6 +1,6 @@
 import { Outlet } from "@tanstack/react-router";
 import { FC, PropsWithChildren } from "react";
-import Header from "./Header";
+import Header from "./components/Header";
 
 export const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (

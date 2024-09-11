@@ -1,9 +1,9 @@
 import { describe, expect, it, vi, Mock } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import Header from "./Header";
-import { useAuth } from "../features/auth/hooks/useAuth";
+import { useAuth } from "../../features/auth/hooks/useAuth";
 
-vi.mock("../features/auth/hooks/useAuth", () => ({
+vi.mock("../../features/auth/hooks/useAuth", () => ({
   useAuth: vi.fn(),
 }));
 

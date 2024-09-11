@@ -1,7 +1,7 @@
 import { FC, FormEvent, useCallback, useState } from "react";
 import * as Form from "@radix-ui/react-form";
-import Input from "../../../shared/components/Input";
-import Button from "../../../shared/components/Button";
+import Input from "../../../shared/ui/Input";
+import Button from "../../../shared/ui/Button";
 
 interface LoginFormProps {
   onLogin: (username: string, password: string) => void;

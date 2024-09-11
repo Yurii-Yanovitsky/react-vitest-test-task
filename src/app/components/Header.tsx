@@ -1,6 +1,6 @@
 import { useCallback } from "react";
-import { useAuth } from "../features/auth/hooks/useAuth";
-import Button from "../shared/components/Button";
+import { useAuth } from "../../features/auth/hooks/useAuth";
+import Button from "../../shared/ui/Button";
 
 const Header = () => {
   const { logout } = useAuth();
