@@ -6,7 +6,7 @@ import { Layout } from "./Layout";
 function App() {
   return (
     <Layout>
-      <RouterProvider router={router} />
+      <RouterProvider basepath="/react-vitest-test-task" router={router} />
     </Layout>
   );
 }
