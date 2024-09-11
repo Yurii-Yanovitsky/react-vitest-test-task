@@ -1,4 +1,5 @@
 {
+  "homepage": "https://yurii-yanovitsky.github.io/react-vitest-test-task",
   "name": "react-vitest-test-task",
   "private": true,
   "version": "0.0.0",
@@ -7,6 +8,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "test": "vitest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "lint": "tsc && eslint --cache",
     "preview": "vite preview",
     "prepare": "husky"
@@ -42,6 +45,7 @@
     "eslint-plugin-react": "^7.35.2",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
+    "gh-pages": "^6.1.1",
     "globals": "^15.9.0",
     "husky": "^9.1.5",
     "jsdom": "^25.0.0",
