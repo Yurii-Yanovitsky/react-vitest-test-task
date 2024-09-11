@@ -1,9 +1,12 @@
-import { injectable } from "tsyringe";
-import { SessionService } from "./SessionService";
+import { injectable, inject } from "tsyringe";
+import { IAuthService } from "../interfaces/IAuthService";
+import type { ISessionService } from "../interfaces/ISessionService";
 
 @injectable()
-export class AuthService {
-  constructor(private sessionService: SessionService) {}
+export class AuthService implements IAuthService {
+  constructor(
+    @inject("ISessionService") private sessionService: ISessionService,
+  ) {}
 
   get isAuthenticated() {
     return this.sessionService.isAuthenticated;

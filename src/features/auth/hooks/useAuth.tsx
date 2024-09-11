@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
 import { container } from "tsyringe";
-import { AuthService } from "../../../core/services/AuthService";
+import { IAuthService } from "../../../core/interfaces/IAuthService";
 
 export const useAuth = () => {
-  const authService = container.resolve(AuthService);
+  const authService = container.resolve<IAuthService>("IAuthService");
   const [isAuthenticated, setIsAuthenticated] = useState(
     authService.isAuthenticated,
   );
